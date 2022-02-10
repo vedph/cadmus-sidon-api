@@ -1,0 +1,179 @@
+﻿{
+  "facets": [
+    {
+      "id": "text",
+      "label": "text",
+      "description": "Text facet",
+      "colorKey": "EBD586",
+      "partDefinitions": [
+        {
+          "typeId": "it.vedph.metadata",
+          "name": "metadata",
+          "description": "Item's categories.",
+          "colorKey": "9898F8",
+          "groupKey": "general",
+          "sortKey": "metadata"
+        },
+        {
+          "typeId": "it.vedph.note",
+          "name": "note",
+          "description": "A free text note.",
+          "colorKey": "B0A0F8",
+          "groupKey": "general",
+          "sortKey": "note"
+        },
+        {
+          "typeId": "it.vedph.token-text",
+          "roleId": "base-text",
+          "IsRequired": true,
+          "name": "text",
+          "description": "Item's text.",
+          "colorKey": "31AB54",
+          "groupKey": "text",
+          "sortKey": "text"
+        },
+        {
+          "typeId": "it.vedph.token-text-layer",
+          "roleId": "fr.it.vedph.apparatus",
+          "name": "apparatus",
+          "description": "Critical apparatus.",
+          "colorKey": "D4E0A4",
+          "groupKey": "text",
+          "sortKey": "text-apparatus"
+        }
+      ]
+    }
+  ],
+  "flags": [
+    {
+      "id": 1,
+      "label": "warn",
+      "description": "The item has warnings.",
+      "colorKey": "FFD95C"
+    },
+    {
+      "id": 2,
+      "label": "complete",
+      "description": "The item is complete.",
+      "colorKey": "49D6CD"
+    },
+    {
+      "id": 4,
+      "label": "revised",
+      "description": "The item is revised.",
+      "colorKey": "49D697"
+    }
+  ],
+  "index": {
+    "writer": {
+      "id": "item-index-writer.mysql"
+    },
+    "reader": {
+      "id": "item-index-reader.mysql"
+    }
+  },
+  "browsers": [
+    {
+      "id": "it.vedph.item-browser.mongo.hierarchy"
+    }
+  ],
+  "thesauri": [
+    {
+      "id": "model-types@en",
+      "entries": [
+        {
+          "id": "it.vedph.metadata",
+          "value": "metadata"
+        },
+        {
+          "id": "it.vedph.note",
+          "value": "note"
+        },
+        {
+          "id": "it.vedph.token-text",
+          "value": "text"
+        },
+        {
+          "id": "it.vedph.token-text-layer",
+          "value": "text layer"
+        },
+        {
+          "id": "fr.it.vedph.apparatus",
+          "value": "apparatus fr."
+        }
+      ]
+    },
+    {
+      "id": "apparatus-tags@en",
+      "entries": [
+        {
+          "id": "margin",
+          "value": "margin"
+        },
+        {
+          "id": "inter",
+          "value": "interlinear"
+        }
+      ]
+    },
+    {
+      "id": "apparatus-authors@en",
+      "entries": [
+        {
+          "id": "lb1-1",
+          "value": "Sidon. epist."
+        },
+        {
+          "id": "lb1-2",
+          "value": "teste Luetjohann in Gai Sollii..."
+        }
+      ]
+    },
+    {
+      "id": "apparatus-witnesses@en",
+      "entries": [
+        {
+          "id": "lw1-1",
+          "value": "codex Harleianus 3685 saec. XV"
+        }
+      ]
+    }
+  ],
+  "seed": {
+    "options": {
+      "seed": 1,
+      "users": [ "zeus" ],
+      "partRoles": [],
+      "fragmentRoles": []
+    },
+    "partSeeders": [
+      {
+        "id": "seed.it.vedph.metadata"
+      },
+      {
+        "id": "seed.it.vedph.note",
+        "options": {
+          "tags": [
+            "language",
+            "history",
+            "geography"
+          ]
+        }
+      },
+      {
+        "id": "seed.it.vedph.token-text"
+      },
+      {
+        "id": "seed.it.vedph.token-text-layer",
+        "options": {
+          "maxFragmentCount": 3
+        }
+      }
+    ],
+    "fragmentSeeders": [
+      {
+        "id": "seed.fr.it.vedph.apparatus"
+      }
+    ]
+  }
+}
