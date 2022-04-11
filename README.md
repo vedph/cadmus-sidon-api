@@ -10,6 +10,8 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
+- updated packages and added mss list to thesauri.
+
 ### 1.0.1
 
 - first test release.

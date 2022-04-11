@@ -133,8 +133,80 @@
       "id": "apparatus-witnesses@en",
       "entries": [
         {
-          "id": "lw1-1",
-          "value": "codex Harleianus 3685 saec. XV"
+          "id": "avr",
+          "value": "Avranches, BM, 242"
+        },
+        {
+          "id": "br1",
+          "value": "Bruxelles, BR, 10020-21"
+        },
+        {
+          "id": "t",
+          "value": "Firenze, BML, plut. 45. 23"
+        },
+        {
+          "id": "m",
+          "value": "Firenze, BML, S. Marco 554"
+        },
+        {
+          "id": "hfd",
+          "value": "Hereford, Cath. Libr., O.II.6"
+        },
+        {
+          "id": "leip",
+          "value": "Leipzig, UB, Rep. I 48 (Leihgabe Leipziger Stadtbibliothek)"
+        },
+        {
+          "id": "roy",
+          "value": "London, BL, Royal 4B. IV"
+        },
+        {
+          "id": "c",
+          "value": "Madrid, BNE, 9448 (olim Ee. 102)"
+        },
+        {
+          "id": "l",
+          "value": "Oxford, Bodl. Libr., Laud. lat. 104 + Erlangen, UB, 2112/7"
+        },
+        {
+          "id": "p1",
+          "value": "Paris, BNF, lat. 2781"
+        },
+        {
+          "id": "p2",
+          "value": "Paris, BNF, lat. 2782"
+        },
+        {
+          "id": "f",
+          "value": "Paris, BNF, la. 9551"
+        },
+        {
+          "id": "n",
+          "value": "Paris, BNF, lat. 18584"
+        },
+        {
+          "id": "sch",
+          "value": "Paris, IRHT, collection privée 347 (olim Schøyen Collection 246)"
+        },
+        {
+          "id": "r",
+          "value": "Reims, BM, 413"
+        },
+        {
+          "id": "stk",
+          "value": "Stockholm, KB, Va 26°"
+        },
+        {
+          "id": "vat1661",
+          "value": "Città del Vaticano, Bibl. Vat., Vat. lat. 1661"
+        },
+        {
+          "id": "v",
+          "value": "Città del Vaticano, Bibl. Vat., Vat. lat. 1783"
+        },
+        {
+          "id": "a",
+          "value": "Città del Vaticano, Bibl. Vat., Vat. lat. 3421"
         }
       ]
     }
