@@ -25,6 +25,8 @@ using Cadmus.Index.Sql;
 using CadmusSidonApi.Services;
 using Cadmus.Graph;
 using Cadmus.Graph.MySql;
+using Cadmus.Core.Storage;
+using Cadmus.Export.Preview;
 
 namespace CadmusSidonApi
 {
@@ -183,6 +185,49 @@ namespace CadmusSidonApi
             });
         }
 
+        private CadmusPreviewer GetPreviewer(IServiceProvider provider)
+        {
+            // get dependencies
+            ICadmusRepository repository =
+                    provider.GetService<IRepositoryProvider>()!.CreateRepository();
+            ICadmusPreviewFactoryProvider factoryProvider =
+                new StandardCadmusPreviewFactoryProvider();
+
+            // nope if disabled
+            if (!Configuration.GetSection("Preview").GetSection("IsEnabled")
+                .Get<bool>())
+            {
+                return new CadmusPreviewer(repository,
+                    factoryProvider.GetFactory("{}"));
+            }
+
+            // get profile source
+            Serilog.ILogger logger = provider.GetService<Serilog.ILogger>()!;
+            IHostEnvironment env = provider.GetService<IHostEnvironment>()!;
+            string path = Path.Combine(env.ContentRootPath,
+                "wwwroot", "preview-profile.json");
+            if (!File.Exists(path))
+            {
+                Console.WriteLine($"Preview profile expected at {path} not found");
+                logger.Error($"Preview profile expected at {path} not found");
+                return new CadmusPreviewer(repository,
+                    factoryProvider.GetFactory("{}"));
+            }
+
+            // load profile
+            Console.WriteLine($"Loading preview profile from {path}...");
+            logger.Information($"Loading preview profile from {path}...");
+            string profile;
+            using (StreamReader reader = new(new FileStream(
+                path, FileMode.Open, FileAccess.Read, FileShare.Read), Encoding.UTF8))
+            {
+                profile = reader.ReadToEnd();
+            }
+            CadmusPreviewFactory factory = factoryProvider.GetFactory(profile);
+
+            return new CadmusPreviewer(repository, factory);
+        }
+
         /// <summary>
         /// Configures the services.
         /// </summary>
@@ -255,6 +300,9 @@ namespace CadmusSidonApi
                 });
                 return repository;
             });
+
+            // previewer
+            services.AddSingleton(p => GetPreviewer(p));
 
             // swagger
             ConfigureSwaggerServices(services);
