@@ -62,6 +62,12 @@
       "label": "revised",
       "description": "The item is revised.",
       "colorKey": "49D697"
+    },
+    {
+      "id": 8,
+      "label": "poetic",
+      "description": "The item contains poetry.",
+      "colorKey": "FF7F00"
     }
   ],
   "index": {
