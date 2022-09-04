@@ -12,7 +12,7 @@
           "description": "Item's categories.",
           "colorKey": "9898F8",
           "groupKey": "general",
-          "sortKey": "metadata"
+          "sortKey": "a"
         },
         {
           "typeId": "it.vedph.note",
@@ -20,7 +20,7 @@
           "description": "A free text note.",
           "colorKey": "B0A0F8",
           "groupKey": "general",
-          "sortKey": "note"
+          "sortKey": "b"
         },
         {
           "typeId": "it.vedph.token-text",
@@ -30,7 +30,7 @@
           "description": "Item's text.",
           "colorKey": "31AB54",
           "groupKey": "text",
-          "sortKey": "text"
+          "sortKey": "c"
         },
         {
           "typeId": "it.vedph.token-text-layer",
@@ -39,7 +39,16 @@
           "description": "Critical apparatus.",
           "colorKey": "D4E0A4",
           "groupKey": "text",
-          "sortKey": "text-apparatus"
+          "sortKey": "d"
+        },
+        {
+          "typeId": "it.vedph.token-text-layer",
+          "roleId": "fr.it.vedph.orthography",
+          "name": "orthography",
+          "description": "Non-standard orthography.",
+          "colorKey": "A4E0B1",
+          "groupKey": "text",
+          "sortKey": "e"
         }
       ]
     }
@@ -106,6 +115,10 @@
         {
           "id": "fr.it.vedph.apparatus",
           "value": "apparatus fr."
+        },
+        {
+          "id": "fr.it.vedph.orthography",
+          "value": "orthography fr."
         }
       ]
     },
@@ -251,6 +264,9 @@
     "fragmentSeeders": [
       {
         "id": "seed.fr.it.vedph.apparatus"
+      },
+      {
+        "id": "seed.fr.it.vedph.orthography"
       }
     ]
   }
