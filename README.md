@@ -2,7 +2,7 @@
 
 Quick Docker image build:
 
-    docker build . -t vedph2020/cadmus-sidon-api:1.0.1 -t vedph2020/cadmus-sidon-api:latest
+    docker build . -t vedph2020/cadmus-sidon-api:1.0.2 -t vedph2020/cadmus-sidon-api:latest
 
 (replace with the current version).
 
@@ -10,6 +10,9 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
+### 1.0.2
+
+- 2022-09-05: added orthography layer.
 - 2022-08-18: added preview.
 - 2022-07-15: updated packages.
 - updated packages and added mss list to thesauri.
