@@ -196,6 +196,7 @@ namespace CadmusSidonApi
             if (!Configuration.GetSection("Preview").GetSection("IsEnabled")
                 .Get<bool>())
             {
+                Console.WriteLine("Preview is disabled");
                 return new CadmusPreviewer(repository,
                     factoryProvider.GetFactory("{}"));
             }
@@ -264,8 +265,8 @@ namespace CadmusSidonApi
                 ApplicationUserRepository>();
 
             // messaging
-            // TODO: you can use another mailer service here. In this case,
-            // also change the types in ConfigureOptionsServices.
+            // if you use another mailer service here, also change
+            // types in ConfigureOptionsServices
             services.AddTransient<IMailerService, DotNetMailerService>();
             services.AddTransient<IMessageBuilderService,
                 FileMessageBuilderService>();
@@ -344,13 +345,18 @@ namespace CadmusSidonApi
                 app.UseExceptionHandler("/Error");
                 if (Configuration.GetValue<bool>("Server:UseHSTS"))
                 {
-                    Console.WriteLine("Using HSTS");
+                    Console.WriteLine("HSTS: yes");
                     app.UseHsts();
                 }
+                else Console.WriteLine("HSTS: no");
             }
 
             if (Configuration.GetValue<bool>("Server:UseHttpsRedirection"))
+            {
+                Console.WriteLine("HttpsRedirection: yes");
                 app.UseHttpsRedirection();
+            }
+            else Console.WriteLine("HttpsRedirection: no");
 
             app.UseRouting();
 
