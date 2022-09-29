@@ -20,7 +20,6 @@ using Cadmus.Api.Services.Auth;
 using Cadmus.Api.Services.Messaging;
 using Cadmus.Api.Services;
 using Microsoft.AspNetCore.HttpOverrides;
-using Cadmus.Index.MySql;
 using Cadmus.Index.Sql;
 using CadmusSidonApi.Services;
 using Cadmus.Graph;
@@ -287,8 +286,7 @@ namespace CadmusSidonApi
                 Configuration.GetConnectionString("Index"),
                 Configuration.GetValue<string>("DatabaseNames:Data"));
             services.AddSingleton<IItemIndexFactoryProvider>(_ =>
-                new StandardItemIndexFactoryProvider(
-                    indexCS));
+                new StandardItemIndexFactoryProvider(indexCS));
 
             // graph repository
             services.AddSingleton<IGraphRepository>(_ =>
@@ -316,7 +314,6 @@ namespace CadmusSidonApi
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
                 .Enrich.WithExceptionDetails()
                 .WriteTo.Console()
-                /*.WriteTo.MSSqlServer(Configuration["Serilog:ConnectionString"],*/
                 .WriteTo.MongoDBCapped(Configuration["Serilog:ConnectionString"],
                     cappedMaxSizeMb: !string.IsNullOrEmpty(maxSize) &&
                         int.TryParse(maxSize, out int n) && n > 0 ? n : 10)
@@ -352,8 +349,11 @@ namespace CadmusSidonApi
                 }
             }
 
-            app.UseHttpsRedirection();
+            if (Configuration.GetValue<bool>("Server:UseHttpsRedirection"))
+                app.UseHttpsRedirection();
+
             app.UseRouting();
+
             // CORS
             app.UseCors("CorsPolicy");
             app.UseAuthentication();
