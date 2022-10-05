@@ -26,6 +26,7 @@ using Cadmus.Graph;
 using Cadmus.Graph.MySql;
 using Cadmus.Core.Storage;
 using Cadmus.Export.Preview;
+using System.Globalization;
 
 namespace CadmusSidonApi
 {
@@ -197,8 +198,8 @@ namespace CadmusSidonApi
                 .Get<bool>())
             {
                 Console.WriteLine("Preview is disabled");
-                return new CadmusPreviewer(repository,
-                    factoryProvider.GetFactory("{}"));
+                return new CadmusPreviewer(factoryProvider.GetFactory("{}"),
+                    repository);
             }
 
             // get profile source
@@ -210,8 +211,8 @@ namespace CadmusSidonApi
             {
                 Console.WriteLine($"Preview profile expected at {path} not found");
                 logger.Error($"Preview profile expected at {path} not found");
-                return new CadmusPreviewer(repository,
-                    factoryProvider.GetFactory("{}"));
+                return new CadmusPreviewer(factoryProvider.GetFactory("{}"),
+                    repository);
             }
 
             // load profile
@@ -224,8 +225,11 @@ namespace CadmusSidonApi
                 profile = reader.ReadToEnd();
             }
             CadmusPreviewFactory factory = factoryProvider.GetFactory(profile);
+            factory.ConnectionString = string.Format(CultureInfo.InvariantCulture,
+                            Configuration.GetConnectionString("Default"),
+                            Configuration.GetValue<string>("DatabaseNames:Data"));
 
-            return new CadmusPreviewer(repository, factory);
+            return new CadmusPreviewer(factory, repository);
         }
 
         /// <summary>

@@ -10,6 +10,10 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
+- 2022-10-05:
+  - updated Cadmus API packages.
+  - added preview for apparatus and note.
+
 ### 1.0.4
 
 - 2022-09-29: optional HTTPS redirection.
