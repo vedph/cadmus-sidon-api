@@ -12,9 +12,9 @@
 
   <ItemGroup>
     <PackageReference Include="AspNetCore.Identity.Mongo" Version="8.3.3" />
-    <PackageReference Include="Cadmus.Api.Controllers" Version="4.1.4" />
-    <PackageReference Include="Cadmus.Api.Models" Version="4.1.4" />
-    <PackageReference Include="Cadmus.Api.Services" Version="4.1.4" />
+    <PackageReference Include="Cadmus.Api.Controllers" Version="4.2.0" />
+    <PackageReference Include="Cadmus.Api.Models" Version="4.2.0" />
+    <PackageReference Include="Cadmus.Api.Services" Version="4.2.0" />
     <PackageReference Include="Cadmus.Seed.General.Parts" Version="2.1.0" />
     <PackageReference Include="Cadmus.Seed.Philology.Parts" Version="4.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.9" />

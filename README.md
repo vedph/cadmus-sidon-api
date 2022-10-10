@@ -10,6 +10,7 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
+- 2022-10-10: updated packages and injection in `Startup.cs` for new `IRepositoryProvider`.
 - 2022-10-05:
   - updated Cadmus API packages.
   - added preview for apparatus and note.
