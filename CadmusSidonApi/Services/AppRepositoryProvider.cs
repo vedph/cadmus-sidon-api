@@ -18,7 +18,7 @@ namespace CadmusSidonApi.Services
         /// <summary>
         /// The connection string.
         /// </summary>
-        public string? ConnectionString { get; set; }
+        public string ConnectionString { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AppRepositoryProvider"/> class.
@@ -27,6 +27,7 @@ namespace CadmusSidonApi.Services
         /// <exception cref="ArgumentNullException">configuration</exception>
         public AppRepositoryProvider()
         {
+            ConnectionString = "";
             var map = new TagAttributeToTypeMap();
             map.Add(new[]
             {

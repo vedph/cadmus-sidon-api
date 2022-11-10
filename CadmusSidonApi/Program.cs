@@ -77,13 +77,13 @@ namespace CadmusSidonApi
                     .ConfigureAppConfiguration((context, config) =>
                     {
                         IConfiguration cfg = AppConfigReader.Read();
-                        string csTemplate = cfg.GetValue<string>("Serilog:ConnectionString");
-                        string dbName = cfg.GetValue<string>("DatabaseNames:Data");
+                        string csTemplate = cfg.GetValue<string>("Serilog:ConnectionString")!;
+                        string dbName = cfg.GetValue<string>("DatabaseNames:Data")!;
                         string cs = string.Format(csTemplate, dbName);
                         Debug.WriteLine($"Serilog:ConnectionString override = {cs}");
                         Console.WriteLine($"Serilog:ConnectionString override = {cs}");
 
-                        Dictionary<string, string> dct = new()
+                        Dictionary<string, string?> dct = new()
                         {
                             { "Serilog:ConnectionString", cs }
                         };
