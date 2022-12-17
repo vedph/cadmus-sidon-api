@@ -2,7 +2,7 @@
 
 Quick Docker image build:
 
-    docker build . -t vedph2020/cadmus-sidon-api:1.0.4 -t vedph2020/cadmus-sidon-api:latest
+    docker build . -t vedph2020/cadmus-sidon-api:2.0.0 -t vedph2020/cadmus-sidon-api:latest
 
 (replace with the current version).
 
@@ -10,6 +10,9 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
+# 2.0.0
+
+- 2022-12-17: updated packages.
 - 2022-11-10: upgraded to NET 7.
 - 2022-10-10: updated packages and injection in `Startup.cs` for new `IRepositoryProvider`.
 - 2022-10-05:
