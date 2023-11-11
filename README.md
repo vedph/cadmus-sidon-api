@@ -10,6 +10,8 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
+- 2023-11-11: updated packages.
+
 ### 4.0.0
 
 - 2023-07-02: [migrated to PostgreSQL](https://myrmex.github.io/overview/cadmus/dev/history/b-rdbms/).
