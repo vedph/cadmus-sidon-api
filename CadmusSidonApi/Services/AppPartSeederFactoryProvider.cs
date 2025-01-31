@@ -3,6 +3,8 @@ using Cadmus.Seed;
 using Cadmus.Seed.General.Parts;
 using Cadmus.Seed.Philology.Parts;
 using Fusi.Microsoft.Extensions.Configuration.InMemoryJson;
+using Microsoft.Extensions.Hosting;
+using System;
 using System.Reflection;
 
 namespace CadmusSidonApi.Services;
@@ -15,13 +17,13 @@ public sealed class AppPartSeederFactoryProvider : IPartSeederFactoryProvider
     private static IHost GetHost(string config)
     {
         // build the tags to types map for parts/fragments
-        Assembly[] seedAssemblies = new[]
-        {
+        Assembly[] seedAssemblies =
+        [
             // Cadmus.Seed.General.Parts
             typeof(NotePartSeeder).Assembly,
             // Cadmus.Seed.Philology.Parts
             typeof(ApparatusLayerFragmentSeeder).Assembly
-        };
+        ];
         TagAttributeToTypeMap map = new();
         map.Add(seedAssemblies);
 

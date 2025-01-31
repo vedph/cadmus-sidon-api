@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using Cadmus.Core;
 using Cadmus.Core.Config;
 using Cadmus.Core.Storage;
@@ -23,19 +24,18 @@ public sealed class AppRepositoryProvider : IRepositoryProvider
     /// <summary>
     /// Initializes a new instance of the <see cref="AppRepositoryProvider"/> class.
     /// </summary>
-    /// <param name="configuration">The configuration.</param>
     /// <exception cref="ArgumentNullException">configuration</exception>
     public AppRepositoryProvider()
     {
         ConnectionString = "";
         var map = new TagAttributeToTypeMap();
-        map.Add(new[]
-        {
+        map.Add(
+        [
             // Cadmus.General.Parts
             typeof(NotePart).GetTypeInfo().Assembly,
             // Cadmus.Philology.Parts
             typeof(ApparatusLayerFragment).GetTypeInfo().Assembly
-        });
+        ]);
 
         _partTypeProvider = new StandardPartTypeProvider(map);
     }

@@ -1,8 +1,12 @@
-# Cadmus Sidon API
+﻿# Cadmus Sidon API
 
-Quick Docker image build:
+🐋 Quick Docker image build (you need to have a `buildx` container):
 
-    docker build . -t vedph2020/cadmus-sidon-api:4.0.0 -t vedph2020/cadmus-sidon-api:latest
+```bash
+docker buildx create --use
+
+docker buildx build . --platform linux/amd64,linux/arm64 -t vedph2020/cadmus-sidon-api:4.0.0 -t vedph2020/cadmus-sidon-api:latest --push
+```
 
 (replace with the current version).
 
@@ -10,6 +14,7 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
+- 2025-01-31: ⚠️ upgraded to NET 9 (see <https://myrmex.github.io/overview/cadmus/dev/history/b-net9>).
 - 2023-11-11: updated packages.
 
 ### 4.0.0
