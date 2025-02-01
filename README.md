@@ -14,6 +14,7 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
+- 2025-02-01: updated thesauri.
 - 2025-01-31: ⚠️ upgraded to NET 9 (see <https://myrmex.github.io/overview/cadmus/dev/history/b-net9>).
 - 2023-11-11: updated packages.
 

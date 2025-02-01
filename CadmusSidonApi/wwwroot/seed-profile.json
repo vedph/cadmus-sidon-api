@@ -157,76 +157,88 @@
       "id": "apparatus-witnesses@en",
       "entries": [
         {
-          "id": "avr",
-          "value": "Abrincensis 242, saec. XII 3-4"
+          "id": "a",
+          "value": "Avranches, Bibliothèque Municipale, 242, XII sec."
         },
         {
-          "id": "br1",
-          "value": "Bruxellensis Bib. Reg. 10020-21, saec. XII"
+          "id": "b",
+          "value": "Bruxelles, KBR, 10020-21, XII²/XIII sec."
         },
         {
-          "id": "t",
-          "value": "Florentinus Laurentianus plut. XLV.23, saec. XII"
+          "id": "f1",
+          "value": "Firenze, BML, S. Marco 554, X/XI sec."
         },
         {
-          "id": "m",
-          "value": "Florentinus Marcianus 554, saec. XI"
+          "id": "f2",
+          "value": "Firenze, BML, Plut. 45.23, XII sec."
         },
         {
-          "id": "hfd",
-          "value": "Hereford, Cathedral Library O.II.6, saec. XII 3-4"
+          "id": "f3",
+          "value": "Firenze, BML, Plut. 45.26, XII sec."
         },
         {
-          "id": "leip",
-          "value": "Lipsiensis I.48, saec. XII 4/XIII 1"
-        },
-        {
-          "id": "roy",
-          "value": "Londinensis BL Royal 4 B IV, saec. XII 1-2"
-        },
-        {
-          "id": "c",
-          "value": "Matritensis bibl. nat. 9448 (olim Ee. 102), saec. XI"
+          "id": "h",
+          "value": "Hereford, Cathedral Library, O.II.6, XII² sec."
         },
         {
           "id": "l",
-          "value": "Oxoniensis Laudianus lat. 104 + Erlangen, UB, 2112/7, 814-830"
+          "value": "Leipzig, UB, Rep. I 48, XIII sec."
+        },
+        {
+          "id": "lon",
+          "value": "London, BL, Royal 4.B.IV, XII¹ sec."
+        },
+        {
+          "id": "m",
+          "value": "Madrid, BNE, 9448, XI sec."
+        },
+        {
+          "id": "o",
+          "value": "Oxford, BL, Laud lat. 104, IX sec."
         },
         {
           "id": "p1",
-          "value": "Parisinus lat. 2781, saec. X 4"
+          "value": "Paris, BnF, Lat. 18584, X sec."
         },
         {
           "id": "p2",
-          "value": "Parisinus lat. 2782, saec. XII 3-4"
+          "value": "Paris, BnF, Lat. 2781, X/XI sec."
         },
         {
-          "id": "f",
-          "value": "Parisinus lat. 9551, saec. XIII 1"
+          "id": "p3",
+          "value": "Paris, BnF, Lat. 2782, XII sec."
         },
         {
-          "id": "sch",
-          "value": "Parisinus, IRHT, c. p. 347 (olim Schøyen Collection 246), saec. XII 3-4"
+          "id": "p4",
+          "value": "Paris, BnF, Lat. 9551, XIII¹ sec."
+        },
+        {
+          "id": "pr",
+          "value": "Paris, IRHT, CP 347, XII² sec."
         },
         {
           "id": "r",
-          "value": "Reims, BM, 413"
+          "value": "Reims, Bibliothèque Municipale, 413, IX sec."
         },
         {
-          "id": "stk",
-          "value": "Stockholmensis bibl. reg. Va 26°, saec. XI 4"
+          "id": "s",
+          "value": "Stockholm, KB, Va 26a, XI/XII sec."
         },
         {
-          "id": "vat1661",
-          "value": "Città del Vaticano, Bibl. Vat., Vat. lat. 1661"
+          "id": "v1",
+          "value": "Città del Vaticano, BAV, Vat. lat. 1783, X/XI sec."
         },
         {
           "id": "v2",
-          "value": "Vaticanus lat. 3421, saec. XI"
+          "value": "Città del Vaticano, BAV, Vat. lat. 3421, XI sec."
         },
         {
-          "id": "v10",
-          "value": "Vaticanus lat. 1661, saec. XII 4/XIII 1"
+          "id": "v3",
+          "value": "Città del Vaticano, BAV, Ott. lat. 2013, XII/XIII sec."
+        },
+        {
+          "id": "v4",
+          "value": "Città del Vaticano, BAV, Vat. lat. 1661, XII/XIII sec."
         }
       ]
     }
