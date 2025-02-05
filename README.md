@@ -5,7 +5,7 @@
 ```bash
 docker buildx create --use
 
-docker buildx build . --platform linux/amd64,linux/arm64 -t vedph2020/cadmus-sidon-api:4.0.0 -t vedph2020/cadmus-sidon-api:latest --push
+docker buildx build . --platform linux/amd64,linux/arm64 -t vedph2020/cadmus-sidon-api:5.0.0 -t vedph2020/cadmus-sidon-api:latest --push
 ```
 
 (replace with the current version).
@@ -13,6 +13,8 @@ docker buildx build . --platform linux/amd64,linux/arm64 -t vedph2020/cadmus-sid
 This is a Cadmus API layer customized for the PRJ project. Most of its code is derived from shared Cadmus libraries. See the [documentation](https://github.com/vedph/cadmus_doc/blob/master/guide/api.md) for more.
 
 ## History
+
+### 5.0.0
 
 - 2025-02-01: updated thesauri.
 - 2025-01-31: ⚠️ upgraded to NET 9 (see <https://myrmex.github.io/overview/cadmus/dev/history/b-net9>).
