@@ -144,12 +144,44 @@
       "id": "apparatus-authors@en",
       "entries": [
         {
-          "id": "lb1-1",
-          "value": "Sidon. epist."
+          "id": "vulg",
+          "value": "vulgo"
         },
         {
-          "id": "lb1-2",
-          "value": "teste Luetjohann in Gai Sollii..."
+          "id": "anderson",
+          "value": "Anderson"
+        },
+        {
+          "id": "kraemer",
+          "value": "Kraemer"
+        },
+        {
+          "id": "leo",
+          "value": "Leo"
+        },
+        {
+          "id": "luetjohann",
+          "value": "Lütjohann"
+        },
+        {
+          "id": "mohr",
+          "value": "Mohr"
+        },
+        {
+          "id": "mommsen",
+          "value": "Mommsen"
+        },
+        {
+          "id": "semple",
+          "value": "Semple"
+        },
+        {
+          "id": "sirmond",
+          "value": "Sirmond"
+        },
+        {
+          "id": "warmington",
+          "value": "Warmington"
         }
       ]
     },
