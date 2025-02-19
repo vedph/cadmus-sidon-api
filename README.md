@@ -5,7 +5,7 @@
 ```bash
 docker buildx create --use
 
-docker buildx build . --platform linux/amd64,linux/arm64,windows/amd64,windows/arm64 -t vedph2020/cadmus-sidon-api:5.0.0 -t vedph2020/cadmus-sidon-api:latest --push
+docker buildx build . --platform linux/amd64,linux/arm64,windows/amd64,windows/arm64 -t vedph2020/cadmus-sidon-api:5.0.1 -t vedph2020/cadmus-sidon-api:latest --push
 ```
 
 (replace with the current version).
@@ -14,6 +14,9 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
+### 5.0.1
+
+- 2025-02-19: fixed missing `.AddApplicationPart(typeof(ThesaurusImportController).Assembly)` in `Program.cs` `Main` method.
 - 2025-02-18:
   - updated apparatus authors thesaurus.
   - updated packages.

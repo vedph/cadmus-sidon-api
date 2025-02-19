@@ -23,6 +23,7 @@ using Microsoft.Extensions.Hosting;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using System;
+using Cadmus.Api.Controllers.Import;
 
 namespace CadmusSidonApi;
 
@@ -146,6 +147,7 @@ public static class Program
 
             // controllers from Cadmus.Api.Controllers
             builder.Services.AddControllers()
+                .AddApplicationPart(typeof(ThesaurusImportController).Assembly)
                 .AddApplicationPart(typeof(ItemController).Assembly)
                 .AddControllersAsServices();
 
