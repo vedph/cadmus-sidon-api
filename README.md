@@ -14,6 +14,12 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
+### 5.0.2
+
+- 2025-04-16:
+  - updated packages.
+  - default item seed count=0 (we are restoring database from backup as the editor is used locally).
+
 ### 5.0.1
 
 - 2025-02-19: fixed missing `.AddApplicationPart(typeof(ThesaurusImportController).Assembly)` in `Program.cs` `Main` method.
